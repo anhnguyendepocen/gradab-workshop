@@ -3,8 +3,8 @@ title: "Variable Selection and Regularization"
 author: "Christoph Kern"
 date: "2 Feb 2018"
 output:
-  html_notebook: default
   html_document: default
+  html_notebook: default
 ---
 
 ## Setup
@@ -181,7 +181,7 @@ This matrix can be used in the `predict` function, along with the respective mod
 
 ```{r}
 p_ridge <- predict(m1, s = bestlam1, newx = Xt)
-p_lasso <- predict(m2, s = bestlam1, newx = Xt)
+p_lasso <- predict(m2, s = bestlam2, newx = Xt)
 p_net <- predict(m3, newx = Xt)
 
 p_null <- predict(m2, s = 1e10, newx = Xt)
